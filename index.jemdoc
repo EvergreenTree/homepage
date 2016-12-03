@@ -1,32 +1,10 @@
 # jemdoc: menu{MENU}{prefix!!!!}
 
-= Changqing Fu -- example page
-[http://cqfu13.xyz/ Changqing Fu] ([cqfu13@fudan.edu.cn] )
+= Changqing Fu 
+[http://evergreentree.github.io/homepage Changqing Fu] ([cqfu13@fudan.edu.cn] )
 
 ~~~
-{}{img_left}{pic.jpg}{alt text}{160}{200}{}
+{}{img_left}{pic/pic.jpg}{alt text}{160}{200}{}
 ~~~
 
-here's some demo
-
-== Example
-Here are some *text* /features/. I could [http://cvxmod.net/ link somewhere] or insert a raw link to another page like [download.html]. I could use +monospace+, too.
-
-I could write special characters like \#, \$ and \+ by just using a backslash (\\) in front of those characters. Or automatically detect an [www@jemnz.com email address].
-
-~~~
-Save the file as +index.jemdoc+, say, and simply call +jemdoc index+ (after [download.html downloading jemdoc], of course).
-~~~
-
-== Next bit, next heading level two
-=== Getting into level three now
-
-Why not use a list 
-- to explain the way you do lists?
-- to demonstrate how a line\n break might work?
-
-Or perhaps a 
-. Multilevel
-  .. Numbered list
-  .. Is more
-. Useful?
+Welcome! I'm an undergraduate student in Fudan University, Shanghai, CHN. Here's my [pdf/CV.pdf CV], [https://www.facebook.com/davidfcq Facebook] and [http://www.linkedin.com/in/cqfu-fdu Linkedin homepage]. Have a nice day!
