@@ -1,0 +1,22 @@
+# jemdoc: menu{MENU}{prefix!!!!}
+
+= Metric Learning Toolbox (Fudan 2017 Graduation Thesis, in Chinese)
+
+== Paper:
+
+[gradthesis/metriclearn.pdf download here]
+
+== Supporting materials in MATLAB:
+
+. [gradthesis/code.zip code used in the paper]
+. [gradthesis/data.zip data used in the paper]
+. [gradthesis/hinton.zip MNIST (Hinton 2006)], a Neural Network Dimensionality Reduction Model applied to the ``MNIST'' handwritten data
+. [gradthesis/lmnn.zip lmnn], by Kilian Q. Weinberger, John C. Blitzer and Lawrence K. Saul
+. [gradthesis/Manifold.zip Manifold learning toolbox], inlcuding:
+.. mani.m by Wittman, UCLA
+.. dtrtoolbox by Laurens van der Maaten, Delft U
+.. Gatesby's toolbox
+. [gradthesis/simplemkl.zip simplemkl, MultiKernel Learning]
+All rights deserved to the original authors!
+
+If you have any questions, please feel free to contact [cqfu13@fudan.edu.cn]

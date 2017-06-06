@@ -1,4 +1,5 @@
 #!/bin/sh 
-python jemdoc.py index.jemdoc;
-python jemdoc.py NDE.jemdoc;
-python jemdoc.py stat.jemdoc;
+python2 jemdoc.py index.jemdoc;
+python2 jemdoc.py gradthesis.jemdoc;
+python2 jemdoc.py NDE.jemdoc;
+python2 jemdoc.py stat.jemdoc;
