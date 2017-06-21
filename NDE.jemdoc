@@ -2,26 +2,28 @@
 
 = Numerical PDE (Fudan 2017 fall assignments)
 
-[pdf/0.pdf lecture notes]
+[pdf/0.pdf part of the lecture notes]
+
+[pic/test.jpg Sample test]
 
 == Solutions (in Chinese)
 
 [pdf/NDE/1.pdf week1]
-
 [pdf/NDE/2.pdf week2]
-
 [pdf/NDE/3.pdf week3]
-
 [pdf/NDE/4.pdf week4]
-
 [pdf/NDE/5.pdf week5]
-
 [pdf/NDE/6.pdf week6]
-
 [pdf/NDE/7.pdf week7]
-
 [pdf/NDE/8.pdf week8]
-
 [pdf/NDE/9.pdf week9]
+[pdf/NDE/11.pdf week11] (No assignments for week 10 and 12) 
+[pdf/NDE/13.pdf week13]
+[pdf/NDE/14.pdf week14]
 
-[pdf/NDE/11.pdf week11] (No assignments for 10 and 12). 
+== Code
+
+[code/code.zip Matlab code]
+
+for more code, visit [http://homepage.fudan.edu.cn/wuxinming/teaching/ Xinming Wu's Homepage].
+
