@@ -1,8 +1,18 @@
-# jemdoc: menu{MENU}{prefix!!!!}
+# jemdoc: menu{MENU}{stat.html}
 
-= Statistical Learning Course
+= Statistical Learning Course (Fudan 2016 Spring)
 
+Partly in Chinese, implemented with R
 
+0. [pdf/stat/notes.zip Lecture Notes]
+
+1. [pdf/stat/hw/1.pdf EM - Gaussian Mixture]
+
+2. [pdf/stat/hw/2.pdf Hidden Markov Model]
+
+3. [pdf/stat/hw/3.pdf Simulation (inverse, acceptance)]
+
+4. [pdf/stat/hw/4.pdf More Sampling (Gibbs, Metropolis-Hasting, etc)]
 
 == 
 

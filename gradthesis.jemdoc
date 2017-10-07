@@ -1,10 +1,10 @@
-# jemdoc: menu{MENU}{prefix!!!!}
+# jemdoc: menu{MENU}{gradthesis.html}
 
-= Metric Learning Toolbox (Fudan 2017 Graduation Thesis, in Chinese)
+= Metric Learning Toolbox (Fudan 2017 Graduation Thesis)
 
 == Paper:
 
-[gradthesis/metriclearn.pdf download here]
+[gradthesis/metriclearn.pdf download here (in Chinese)]
 
 == Supporting materials in MATLAB:
 
