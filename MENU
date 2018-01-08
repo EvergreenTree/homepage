@@ -1,11 +1,11 @@
 Homepage
-    home			[index.html]
+    home							[index.html]
 
-Projects
-    Metric Learning Toolbox	[gradthesis.html]
-    NDE assignment 		[NDE.html]
-    Stat Computing assignment 	[stat.html]
-    Blog (under mantainance)	[http://blog.changqingfu.com/]
+Courses
+    Numerical PDE					[NDE.html]
+    Stat Computing 					[stat.html]
+    Statictical Machine Learning			[statapp.html]
 
-More
-    Pictures			[pictures.html]
+Project
+    Metric Learning Toolbox				[gradthesis.html]
+    Seam Carving					[seamcarving.html]

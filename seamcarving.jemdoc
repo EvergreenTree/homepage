@@ -1,0 +1,37 @@
+# jemdoc: menu{MENU}{stat.html}
+
+= Project: Seam Carving (U Paris 7 2017 Fall)
+
+~~~
+{}{img_left}{pic/eiffel.jpg}{eiffel}{260}{222}{}
+Original
+~~~
+
+~~~
+{}{img_left}{pic/eiffel_scale.jpg}{eiffel}{130}{222}{}
+Simple scaling
+~~~
+
+~~~
+{}{img_left}{pic/eiffel_seam.jpg}{eiffel}{260}{222}{}
+Delete Seam
+~~~
+
+~~~
+{}{img_left}{pic/eiffel_half.jpg}{eiffel}{130}{222}{}
+Outcome
+~~~
+
+== Paper: 
+Avidan S, Shamir A. /Seam carving for content-aware image resizing[C]/ ACM Transactions on graphics (TOG). ACM, 2007, 26(3): 10.
+[https://pdfs.semanticscholar.org/c891/bfa5ff33cad8a7a4d42cfd63d2c163f6a3ad.pdf Download paper here] 
+
+Implemented with C.
+
+
+== Wiki Page on Github
+[https://github.com/EvergreenTree/Seam-Carving-C-implementation/wiki Seam-Carving-C-implementation] 
+
+
+
+
