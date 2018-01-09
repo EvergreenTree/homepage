@@ -23,14 +23,14 @@ Outcome
 ~~~
 
 == Paper: 
-Avidan S, Shamir A. /Seam carving for content-aware image resizing[C]/ ACM Transactions on graphics (TOG). ACM, 2007, 26(3): 10.
+Avidan S, Shamir A. /Seam carving for content-aware image resizing / ACM Transactions on graphics (TOG). ACM, 2007, 26(3): 10.
 [https://pdfs.semanticscholar.org/c891/bfa5ff33cad8a7a4d42cfd63d2c163f6a3ad.pdf Download paper here] 
 
-Implemented with C.
 
 
 == Wiki Page on Github
 [https://github.com/EvergreenTree/Seam-Carving-C-implementation/wiki Seam-Carving-C-implementation] 
+
 
 
 
