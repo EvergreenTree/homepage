@@ -1,5 +1,4 @@
-# jemdoc: menu{MENU}{index.html}
-
+# jemdoc: menu{MENU}{example.html}
 = Changqing Fu 
 [http://evergreentree.github.io/homepage Changqing Fu] ([cqfu13@fudan.edu.cn] )
 
@@ -7,7 +6,8 @@
 {}{img_left}{pic/pic.jpg}{Profile Pic}{160}{200}{}
 ~~~
 
-Welcome! I'm an undergraduate student in Fudan University, Shanghai, China. Here's my [pdf/CV.pdf CV], [https://www.facebook.com/davidfcq Facebook], [https://github.com/EvergreenTree GitHub] and [http://www.linkedin.com/in/cqfu-fdu Linkedin].
+Welcome! I'm a first-year PhD student in Paris Dauphine University / PSL Research University,  advised by Professor [https://www.ceremade.dauphine.fr/~cohen/ Laurent Cohen].
+Here are my [pdf/CV.pdf CV], [https://www.facebook.com/davidfcq Facebook], [https://github.com/EvergreenTree GitHub] and [http://www.linkedin.com/in/cqfu-fdu Linkedin].
 
 Have a nice day!
 
