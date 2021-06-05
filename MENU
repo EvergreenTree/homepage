@@ -1,11 +1,11 @@
 Homepage
-    home							[index.html]
+    Home                            [index.html]
+    Publication                     [publication.html]
 
 Courses
-    Numerical PDE					[NDE.html]
-    Stat Computing 					[stat.html]
-    Statictical Machine Learning			[statapp.html]
+    Numerical PDE                   [NDE.html]
+    Stat Computing                  [stat.html]
 
 Project
-    Metric Learning Toolbox				[gradthesis.html]
-    Seam Carving					[seamcarving.html]
+    Metric Learning Toolbox         [gradthesis.html]
+    Seam Carving                    [seamcarving.html]
