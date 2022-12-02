@@ -1,2 +1,2 @@
-# homepage#
-This is my homepage. See http://www.changqingfu.com
+# homepage
+[https://changqingfu.com](https://changqingfu.com)

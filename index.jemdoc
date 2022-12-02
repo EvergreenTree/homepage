@@ -1,22 +1,23 @@
 = Changqing Fu 
 
 ~~~
-{}{img_left}{pic/pic.jpg}{Profile Pic}{160}{200}{}
+{}{img_left}{pic/pic.jpg}{Profile Pic}{200}{200}{}
 
 *Research Interests*: Computer Vision and Machine Learning
 
-Welcome! I'm a senior-year PhD student in CEREMADE, Université de Paris IX - Dauphine - PSL, and PR\[AI\]RIE Institute, fortunately advised by [https://www.ceremade.dauphine.fr/~cohen/ Laurent Cohen]. Before that I recieved a Bachelor's degree from School of Mathematical Sciences in Fudan University advised by [https://mastone1983.github.io/ Lei Shi], and a Master's degree in Theoretical and Applied Mathematics from Paris IX - PSL advised by [https://www.ceremade.dauphine.fr/~mula/ Olga Mula] and [https://sites.google.com/site/robryd/ Robin Ryder]. I was then a graduate student in University at Albany, State University of New York advised by [https://www.albany.edu/~yy298919/ Yiming Ying]. 
+Welcome! I'm a senior-year PhD student in CEREMADE, University of Paris IX Dauphine - PSL, fortunately advised by Prof. [https://www.ceremade.dauphine.fr/~cohen/ Laurent Cohen]. Before that I was a graduate student in University at Albany, State University of New York advised by Prof. [https://www.albany.edu/~yy298919/ Yiming Ying]. I recieved a Bachelor's degree from School of Mathematical Sciences in Fudan University advised by Prof. [https://mastone1983.github.io/ Lei Shi], and a Master's degree in Theoretical and Applied Mathematics from Paris IX - PSL advised by [https://www.ceremade.dauphine.fr/~mula/ Olga Mula] and [https://sites.google.com/site/robryd/ Robin Ryder]. 
 
-Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Page], [pdf/CV.pdf CV], [https://www.facebook.com/davidfcq Facebook], [https://github.com/EvergreenTree GitHub], [http://www.linkedin.com/in/cqfu-fdu Linkedin] and some [pictures.html pictures of mine]:)
+Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Page], [pdf/CV.pdf CV], [https://github.com/EvergreenTree GitHub] and [http://www.linkedin.com/in/cqfu-fdu Linkedin].
 
 *Email*: cfu_at_ceremade_dot_dauphine_dot_fr
 ~~~
 
-== Publications and Talks
-- Changqing Fu and Laurent D. Cohen. Geometric Deformation on Objects: Unsupervised Image Manipulation via Conjugation. In Scale Space and Variational Methods in Computer Vision (SSVM 2021), Lecture Notes in Computer Science (LNCS Volume 12679), Springer Nature.
-- General session “AI in Healthcare”, INFORMS Annual Meeting, Oct 25, 2021, Virtual and CA, USA
-- Talk in Applied Mathematics Ph.D. Seminar, Sep. 13, Fudan University, Shanghai, China
-- Oral Presenter in MIAI/3IA Workshop, Nov 2021, Toulouse, France
-- Talk in Young Researcher's Seminar, CEREMADE, Paris Dauphine University, Jan 20, 2022, Paris, France
-- Talk in Winter School for Young Researchers, CEREMADE, Feb 28, 2022, Normandy, France
+== Publications
+- Changqing Fu and Laurent D. Cohen. Geometric Deformation on Objects: Unsupervised Image Manipulation via Conjugation. In Scale Space and Variational Methods in Computer Vision (SSVM 2021), Lecture Notes in Computer Science (LNCS Volume 12679), Springer Nature. [ssvm21.pdf paper] [pdf/toulouse.pdf slides]
 
+== Talks
+- General session “AI in Healthcare”, INFORMS Annual Meeting, Oct 25, 2021, Virtual and CA, USA 
+- Talk in Applied Mathematics Ph.D. Seminar, Sep. 13, Fudan University, Shanghai, China 
+- Oral Presenter in MIAI/3IA Workshop, Nov 2021, Toulouse, France 
+- Talk in Young Researcher's Seminar, CEREMADE, Paris Dauphine University, Jan 20, 2022, Paris, France 
+- Talk in Winter School for Young Researchers, CEREMADE, Feb 28, 2022, Normandy, France 
