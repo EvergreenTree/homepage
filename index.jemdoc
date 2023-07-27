@@ -3,11 +3,11 @@
 ~~~
 {}{img_left}{pic/pic.jpg}{Profile Pic}{200}{200}{}
 
-*Research Interests*: I'm interested in visual generative models and a broad range topics in deep learning. I'm currently working on the improvement of diffusion models for better parameter/training/inference efficiency and more effective control, using the approaches of geometric deep learning.
+*Research Interests*: I'm interested in visual generative models and a broad range of topics in deep learning. Currently I have particular interest in the improvement of diffusion models for better parameter\/training\/inference efficiency and with more effective control, using the approaches from geometric deep learning.
 
 I'm a senior-year PhD student in CEREMADE, University of Paris IX Dauphine - PSL, fortunately advised by Prof. [https://www.ceremade.dauphine.fr/~cohen/ Laurent D. Cohen]. Before that I was a graduate teaching assistant in University at Albany - SUNY advised by Prof. [https://www.albany.edu/~yy298919/ Yiming Ying]. I recieved a Master's degree in Applied and Theoretical Mathematics from Paris IX - PSL advised by [https://www.ceremade.dauphine.fr/~mula/ Olga Mula] and [https://sites.google.com/site/robryd/ Robin Ryder], and a Bachelor's degree from School of Mathematical Sciences in Fudan University advised by Prof. [https://mastone1983.github.io/ Lei Shi]. 
 
-Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Page], [pdf/CV.pdf CV], [https://github.com/EvergreenTree GitHub], [Twitter https://twitter.com/evergreencqfu] and [http://www.linkedin.com/in/cqfu-fdu Linkedin].
+Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Page], [pdf/CV.pdf CV], [https://github.com/EvergreenTree GitHub], [https://twitter.com/evergreencqfu Twitter] and [http://www.linkedin.com/in/cqfu-fdu Linkedin].
 
 *Email*: cfu_at_ceremade_dot_dauphine_dot_fr
 ~~~
@@ -30,17 +30,17 @@ Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Pag
 
 ~~~
 {}{img_left}{pic/barrier.png}{Neural Barrier Process}{200}{80}{} 
-*Neural Barrier Process.* A Riemannian-geometrical point of view on neural networks via a non-stationary central path flow of a conic program with hard barrier. The regularization of the cone perspective enables alignment of neural networks of different depth.
+*Neural Barrier Process.* A Riemannian-geometrical point of view on neural networks via a non-stationary central path flow of a conic program with hard barrier. The time regularization of the cone's perspective enables alignment of neural networks of different depth.
 ~~~
 
 ~~~
 {}{img_left}{pic/conic.png}{Conic Linear Unit}{200}{80}{} 
-*Conic Linear Unit.* An non-pointwise activation function with unprecedented infinite-order symmetry group, which enjoys better generative quality, and enables the possibility of aligning two neural networks with different widths, with applications to federated learning.
+*Conic Linear Unit.* A non-pointwise activation function with unprecedented infinite-order symmetry group, which enjoys better generative quality, and enables alignment of neural networks with different widths. Applications involves more flexible federated learning.
 ~~~
 
 ~~~
 {}{img_left}{pic/conj.png}{Geometric Deformation on Objects}{200}{80}{} 
-*Geometric Deformation on Objects.* A robust unsupervised two-stage image manipulation model by modifying contour constraints. The use of contour constraint is inspired by the sparsity of the edited constraint, whereas the coarse-grained post-processing single-image GAN alleviates the quality for out-of-distribution inputs.
+*Geometric Deformation on Objects.* A robust unsupervised two-stage image manipulation model by modifying contour constraints. The use of contour constraint is inspired by the sparsity of the edited constraint, whereas the coarse-grained post-processing single-image GAN alleviates the output quality from out-of-distribution inputs.
 ~~~
 
 == Publications
