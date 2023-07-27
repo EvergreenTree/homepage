@@ -3,21 +3,57 @@
 ~~~
 {}{img_left}{pic/pic.jpg}{Profile Pic}{200}{200}{}
 
-*Research Interests*: Computer Vision and Machine Learning
+*Research Interests*: I'm interested in visual generative models and a broad range topics in deep learning. I'm currently working on the improvement of diffusion models for better parameter/training/inference efficiency and more effective control, using the approaches of geometric deep learning.
 
-Welcome! I'm a senior-year PhD student in CEREMADE, University of Paris IX Dauphine - PSL, fortunately advised by Prof. [https://www.ceremade.dauphine.fr/~cohen/ Laurent Cohen]. Before that I was a graduate student in University at Albany, State University of New York advised by Prof. [https://www.albany.edu/~yy298919/ Yiming Ying]. I recieved a Bachelor's degree from School of Mathematical Sciences in Fudan University advised by Prof. [https://mastone1983.github.io/ Lei Shi], and a Master's degree in Theoretical and Applied Mathematics from Paris IX - PSL advised by [https://www.ceremade.dauphine.fr/~mula/ Olga Mula] and [https://sites.google.com/site/robryd/ Robin Ryder]. 
+I'm a senior-year PhD student in CEREMADE, University of Paris IX Dauphine - PSL, fortunately advised by Prof. [https://www.ceremade.dauphine.fr/~cohen/ Laurent D. Cohen]. Before that I was a graduate teaching assistant in University at Albany - SUNY advised by Prof. [https://www.albany.edu/~yy298919/ Yiming Ying]. I recieved a Master's degree in Applied and Theoretical Mathematics from Paris IX - PSL advised by [https://www.ceremade.dauphine.fr/~mula/ Olga Mula] and [https://sites.google.com/site/robryd/ Robin Ryder], and a Bachelor's degree from School of Mathematical Sciences in Fudan University advised by Prof. [https://mastone1983.github.io/ Lei Shi]. 
 
 Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Page], [pdf/CV.pdf CV], [https://github.com/EvergreenTree GitHub], [Twitter https://twitter.com/evergreencqfu] and [http://www.linkedin.com/in/cqfu-fdu Linkedin].
 
 *Email*: cfu_at_ceremade_dot_dauphine_dot_fr
 ~~~
 
+== Projects
+~~~
+{}{img_left}{pic/conv3d.png}{DeepPrism}{200}{80}{} 
+*DeepPrism.* An unprecedented 1000x better parameter-efficient network design for generative models, by leveraging an equivariance on the channel dimension, where training and inference FLOPs are also greatly reduced. This design applies equally to attention layers and maintains generation performance for a variety of models such as VAE, StableDiffusion (LDM).
+~~~
+
+~~~
+{}{img_left}{pic/iceberg.png}{Tip of the Iceberg}{200}{80}{} 
+*Tip of the Iceberg.* An improvement on the widely-used perceptual loss, to achieve 10x more training efficieny for generative models, by calculating non-singular symmetric features instead of activations in the path-integral along layers. 
+~~~
+
+~~~
+{}{img_left}{pic/attention.png}{Unifying Activation and Attention}{200}{80}{} 
+*Unifying Activation and Attention.* A projective-geometric point of view to unify different operators in neural networks, under which the self-attention function intrinsically coincides with the activation-convolution layers by defining proper kernel functions. This connection does not change the form of commonly-used neural networks, can be visually confirmed, and leads to a unified view of the dynamics of neural processes. 
+~~~
+
+~~~
+{}{img_left}{pic/barrier.png}{Neural Barrier Process}{200}{80}{} 
+*Neural Barrier Process.* A Riemannian-geometrical point of view on neural networks via a non-stationary central path flow of a conic program with hard barrier. The regularization of the cone perspective enables alignment of neural networks of different depth.
+~~~
+
+~~~
+{}{img_left}{pic/conic.png}{Conic Linear Unit}{200}{80}{} 
+*Conic Linear Unit.* An non-pointwise activation function with unprecedented infinite-order symmetry group, which enjoys better generative quality, and enables the possibility of aligning two neural networks with different widths, with applications to federated learning.
+~~~
+
+~~~
+{}{img_left}{pic/conj.png}{Geometric Deformation on Objects}{200}{80}{} 
+*Geometric Deformation on Objects.* A robust unsupervised two-stage image manipulation model by modifying contour constraints. The use of contour constraint is inspired by the sparsity of the edited constraint, whereas the coarse-grained post-processing single-image GAN alleviates the quality for out-of-distribution inputs.
+~~~
+
 == Publications
 - Changqing Fu and Laurent D. Cohen. Geometric Deformation on Objects: Unsupervised Image Manipulation via Conjugation. In Scale Space and Variational Methods in Computer Vision (SSVM 2021), Lecture Notes in Computer Science (LNCS Volume 12679), Springer Nature. [pdf/ssvm21.pdf paper] [pdf/winterschool.pdf slides]
 
-== Talks
-- General session “AI in Healthcare”, INFORMS Annual Meeting, Oct 25, 2021, Virtual and CA, USA 
-- Talk in Applied Mathematics Ph.D. Seminar, Sep. 13, Fudan University, Shanghai, China 
-- Oral Presenter in MIAI/3IA Workshop, Nov 2021, Toulouse, France 
-- Talk in Young Researcher's Seminar, CEREMADE, Paris Dauphine University, Jan 20, 2022, Paris, France 
-- Talk in Winter School for Young Researchers, CEREMADE, Feb 28, 2022, Normandy, France 
+== Talks and Workshops
+- Symposium on AI in Biology and Health, Institut Pasteur, July 3-4, 2023, Paris, France
+- Ellis unConference, July 25 2023, Paris, France
+- Poster Presenter in MIAI/3IA Workshop, June 2023, Toulouse, France
+- General session “AI in Healthcare”, INFORMS Annual Meeting, Oct 25  2021, Virtual and CA, USA 
+- Invited Speaker in Applied Mathematics Ph.D. Seminar, Sep 13 2021, Fudan University, Shanghai, China  
+- Winter School for Young Researchers, CEREMADE, Feb 28 2022, Normandy, France 
+- Young Researcher's Seminar, CEREMADE, Paris Dauphine University, Jan 20 2022, Paris, France 
+- Oral Presenter in MIAI/3IA Workshop, Nov 2021, Toulouse, France
+- International Summer Program in Economics Education, Aug 2015, Hebrew University of Jerusalem
+- Business Summer School, Aug 2014, University of Cambridge
