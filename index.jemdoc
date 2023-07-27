@@ -35,7 +35,7 @@ Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Pag
 
 ~~~
 {}{img_left}{pic/conic.png}{Conic Linear Unit}{200}{80}{} 
-*Conic Linear Unit.* A non-pointwise activation function with unprecedented infinite-order symmetry group, which enjoys better generation quality, and enables alignment of neural networks with different widths. Application involves more flexible federated learning using Optimal Transport.
+*Conic Linear Unit.* A non-pointwise activation function with unprecedented infinite-order symmetry group, which improves generation quality, and enables alignment of neural networks with different widths. Application involves more flexible Federated Learning using Optimal Transport.
 ~~~
 
 ~~~
