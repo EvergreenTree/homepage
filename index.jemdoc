@@ -29,11 +29,6 @@ Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Pag
 ~~~
 
 ~~~
-{}{img_left}{pic/barrier.png}{Neural Barrier Process}{300}{124}{} 
-*Neural Barrier Process.* A Riemannian-geometrical point of view on neural networks via a non-stationary central path flow of a conic program with hard barrier. The path regularization of the cone's perspective enables alignment of neural networks of different depth.
-~~~
-
-~~~
 {}{img_left}{pic/conic.png}{Conic Linear Unit}{300}{124}{} 
 *Conic Linear Unit.* A non-pointwise activation function with unprecedented infinite-order symmetry group, which improves generation quality, and enables alignment of neural networks with different widths. Application involves more flexible Federated Learning using Optimal Transport.
 ~~~
