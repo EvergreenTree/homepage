@@ -41,6 +41,10 @@ body {
     vertical-align: top;
 }
 
+#layout-content {
+    clear: both; /* Ensures content flows below the logo */
+}
+
 #layout-menu a {
 	line-height: 1.5em;
 	margin-left: 0.5em;
@@ -364,4 +368,21 @@ img {
 table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
+}
+
+/* Logo styles */
+#logo {
+    float: left;
+    margin-right: 20px;
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+}
+
+#layout-content {
+    clear: both; /* Ensures content flows below the logo */
+}
+
+#toptitle {
+    display: flex;
+    align-items: center;
 }

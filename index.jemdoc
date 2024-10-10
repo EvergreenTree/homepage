@@ -29,26 +29,34 @@ Here are my [https://prairie-institute.fr/chairs/fu-changqing/ Institutional Pag
 ~~~
 
 ~~~
-{}{img_left}{pic/conic.png}{Conic Linear Unit}{300}{124}{} 
-*Conic Linear Unit.* A non-pointwise activation function with unprecedented infinite-order symmetry group, which improves generation quality, and enables alignment of neural networks with different widths. Application involves more flexible Federated Learning using Optimal Transport.
+{}{img_left}{pic/conic.png}{Conic Linear Units}{300}{124}{} 
+*Conic Linear Units.* A non-pointwise activation function with unprecedented infinite-order symmetry group, which improves generation quality, and enables alignment of neural networks with different widths. Application involves more flexible Federated Learning using Optimal Transport.
 ~~~
 
 ~~~
-{}{img_left}{pic/conj.png}{Geometric Deformation on Objects}{300}{124}{} 
-*Geometric Deformation on Objects.* A robust unsupervised two-stage image manipulation model by modifying contour constraints. The use of contour constraints is inspired by the sparsity of the edited constraint, while the coarse-grained post-processing single-image GAN alleviates distortion caused by out-of-distribution inputs.
+{}{img_left}{pic/conj.png}{Contour-Based Image Manipulation}{300}{124}{} 
+*Contour-Based Image Manipulation.* A robust unsupervised two-stage image manipulation model by modifying contour constraints. The use of contour constraints is inspired by the sparsity of the edited constraint, while the coarse-grained post-processing single-image GAN alleviates distortion caused by out-of-distribution inputs.
 ~~~
 
 == Publications
-- Changqing Fu and Laurent D. Cohen. Geometric Deformation on Objects: Unsupervised Image Manipulation via Conjugation. In Scale Space and Variational Methods in Computer Vision (SSVM 2021), Lecture Notes in Computer Science (LNCS Volume 12679), Springer Nature. [pdf/ssvm21.pdf paper] [pdf/winterschool.pdf slides]
+- Changqing Fu and Laurent D. Cohen. Conic Activation Functions. /Preprint/.
+- Changqing Fu and Laurent D. Cohen. Conic Linear Units: Improved Model Fusion and Rotational-Symmetric Generative Model. In /Proceedings of the 19th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications - Volume 2: VISAPP/, Virtual and Rome, Italy. [pdf/visapp.pdf pdf] [pdf/colu_poster.pdf poster]
+- Changqing Fu and Laurent D. Cohen. DeepPrism: Channel Convolution for Lightweight Generative Models. In /Proceedings of the 5th International Conference on Video, Signal and Image Processing/, ACM 2023, Virtual and Harbin, China. (Best Presentation Award) [pdf/vsip.pdf pdf] [pdf/vsip_slides.pdf slides]
+- Changqing Fu and Laurent D. Cohen. Geometric Deformation on Objects: Unsupervised Image Manipulation via Conjugation. In /Proceedings of the 8th International Conference on Scale Space and Variational Methods in Computer Vision/, Lecture Notes in Computer Science, Springer 2021, Virtual Event. [pdf/ssvm21.pdf pdf] [pdf/winterschool.pdf slides]
 
-== Talks and Workshops
+== Talks
+- Poster in Workshop on Geometry-Informed Machine Learning, Mines ParisTech, July 3-4, 2023, Paris, France
+- Stability AI Research Program @CogX, 12-14 Sep, 2023, London, UK
 - Symposium on AI in Biology and Health, Institut Pasteur, July 3-4, 2023, Paris, France
-- Ellis unConference, July 25 2023, Paris, France
-- Poster Presenter in MIAI/3IA Workshop, June 2023, Toulouse, France
-- General session “AI in Healthcare”, INFORMS Annual Meeting, Oct 25  2021, Virtual and CA, USA 
+- Speaker in Ellis unConference, July 25 2023, Paris, France
+- Poster in Workshop on Optimization and Machine Learning, June 26-27 2023, Toulouse, France
+- General session “AI in Healthcare”, INFORMS Annual Meeting, Oct 25 2021, Virtual and CA, USA 
 - Invited Speaker in Applied Mathematics Ph.D. Seminar, Sep 13 2021, Fudan University, Shanghai, China  
 - Winter School for Young Researchers, CEREMADE, Feb 28 2022, Normandy, France 
-- Young Researcher's Seminar, CEREMADE, Paris Dauphine University, Jan 20 2022, Paris, France 
-- Oral Presenter in MIAI/3IA Workshop, Nov 2021, Toulouse, France
+- Speaker in Artificial Intelligence Interdisciplinary Institutes (3IA) Workshop, Nov 2021, Toulouse, France
+- Young Researcher's Seminar, CEREMADE, Paris Dauphine University, June 2 2023, Feb 2 2023, Feb 28 2022, Jan 20 2022, Paris, France 
 - International Summer Program in Economics Education, Aug 2015, Hebrew University of Jerusalem
 - Business Summer School, Aug 2014, University of Cambridge
+
+== Reviewer Duties
+- ICCV, ECCV, AISTATS, AAAI, ICLR, NeurIPS

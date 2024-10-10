@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#! python
 
 """jemdoc version 0.7.3, 2012-11-27."""
+"""converted to python3 with cursor and claude3.5 Changqing Fu 2024-10-10."""
 
 # Copyright (C) 2007-2012 Jacob Mattingley (jacobm@stanford.edu).
 #
@@ -289,33 +290,37 @@ def readnoncomment(f):
   else:
     return l.rstrip() + '\n' # leave just one \n and no spaces etc.
 
-def parseconf(cns):
-  syntax = {}
-  warn = False # jem. make configurable?
-  # manually add the defaults as a file handle.
-  fs = [io.StringIO(standardconf())]
-  for sname in cns:
-    fs.append(open(sname, 'rb'))
+def parseconf(confnames):
+    syntax = {}
+    warn = False  # jem. make configurable?
+    # manually add the defaults as a file handle.
+    fs = [io.StringIO(standardconf())]
+    
+    for sname in confnames:
+        fs.append(open(sname, 'r'))  # Ensure files are opened in read mode
 
-  for f in fs:
-    while pc(controlstruct(f)) != '':
-      l = readnoncomment(f)
-      r = re.match(r'\[(.*)\]\n', l)
+    for f in fs:
+        f.seek(0)  # Ensure the file pointer is at the beginning
+        while True:  # Use a loop to handle the end of the file
+            line = readnoncomment(f)
+            if line == '':  # Break if end of file is reached
+                break
+            r = re.match(r'\[(.*)\]\n', line)
 
-      if r:
-        tag = r.group(1)
+            if r:
+                tag = r.group(1)
 
-        s = ''
-        l = readnoncomment(f)
-        while l not in ('\n', ''):
-          s += l
-          l = readnoncomment(f)
+                s = ''
+                line = readnoncomment(f)
+                while line not in ('\n', ''):
+                    s += line
+                    line = readnoncomment(f)
 
-        syntax[tag] = s
+                syntax[tag] = s
 
-    f.close()
+        f.close()
 
-  return syntax
+    return syntax
 
 def insertmenuitems(f, mname, current, prefix):
   m = open(mname, 'rb')
@@ -379,27 +384,30 @@ def hb(f, tag, content1, content2=None):
     out(f, r)
 
 def pc(f, ditchcomments=True):
-  """Peeks at next character in the file."""
-  # Should only be used to look at the first character of a new line.
-  c = f.inf.read(1)
-  if c: # only undo forward movement if we're not at the end.
-    if ditchcomments and c == '#':
-      l = nl(f)
-      if doincludes(f, l):
-        return "#"
+    """Peeks at next character in the file."""
+    # Should only be used to look at the first character of a new line.
+    c = f.inf.read(1)
+    if c: # only undo forward movement if we're not at the end.
+        if isinstance(c, bytes):
+            c = c.decode('utf-8')
+        if ditchcomments and c == '#':
+            l = nl(f)
+            if doincludes(f, l):
+                return "#"
 
-    if c in ' \t':
-      return pc(f)
+        if c in ' \t':
+            return pc(f)
 
-    if c == '\\':
-      c += pc(f)
+        if c == '\\':
+            next_c = pc(f)
+            c += next_c if isinstance(next_c, str) else next_c.decode('utf-8')
 
-    f.inf.seek(-1, 1)
-  elif f.otherfiles:
-    f.nextfile()
-    return pc(f, ditchcomments)
+        f.inf.seek(-1, 1)
+    elif f.otherfiles:
+        f.nextfile()
+        return pc(f, ditchcomments)
 
-  return c
+    return c if c else ''
 
 def doincludes(f, l):
   ir = 'includeraw{'
@@ -416,41 +424,45 @@ def doincludes(f, l):
   return True
 
 def nl(f, withcount=False, codemode=False):
-  """Get input file line."""
-  s = f.inf.readline()
-  if not s and f.otherfiles:
-    f.nextfile()
-    return nl(f, withcount, codemode)
+    """Get input file line."""
+    s = f.inf.readline()
+    if not s and f.otherfiles:
+        f.nextfile()
+        return nl(f, withcount, codemode)
 
-  f.linenum += 1
+    f.linenum += 1
 
-  if not codemode:
-    # remove any special characters - assume they were checked by pc()
-    # before we got here.
-    # remove any trailing comments.
-    s = s.lstrip(' \t')
-    s = re.sub(r'\s*(?<!\\)#.*', '', s)
+    # Check if s is bytes, if so decode it
+    if isinstance(s, bytes):
+        s = s.decode('utf-8')
 
-  if withcount:
-    if s[0] == '.':
-      m = r'\.'
+    if not codemode:
+        # remove any special characters - assume they were checked by pc()
+        # before we got here.
+        # remove any trailing comments.
+        s = s.lstrip(' \t')
+        s = re.sub(r'\s*(?<!\\)#.*', '', s)
+
+    if withcount:
+        if s.startswith('.'):
+            m = r'\.'
+        else:
+            m = re.escape(s[0]) if s else ''
+
+        r = re.match('(%s+) ' % m, s)
+        if not r:
+            raise SyntaxError("couldn't handle the jandal (code 12039) on line"
+                    " %d" % f.linenum)
+
+        if not codemode:
+            s = s.lstrip('-.=:')
+
+        return (s, len(r.group(1)))
     else:
-      m = s[0]
+        if not codemode:
+            s = s.lstrip('-.=:')
 
-    r = re.match('(%s+) ' % m, s)
-    if not r:
-      raise SyntaxError("couldn't handle the jandal (code 12039) on line"
-                " %d" % f.linenum)
-
-    if not codemode:
-      s = s.lstrip('-.=:')
-
-    return (s, len(r.group(1)))
-  else:
-    if not codemode:
-      s = s.lstrip('-.=:')
-
-    return s
+        return s
 
 def np(f, withcount=False, eatblanks=True):
   """Gets the next paragraph from the input file."""
@@ -648,9 +660,9 @@ def br(b, f, tableblock=False):
   for m in r.findall(b):
     repl = os.environ.get(m)
     if repl == None:
-      b = re.sub("!\$%s\$!" % m, 'FAILED_MATCH_' + m, b)
+      b = re.sub(r"!\$%s\$!" % m, 'FAILED_MATCH_' + m, b)
     else:
-      b = re.sub("!\$%s\$!" % m, repl, b)
+      b = re.sub(r"!\$%s\$!" % m, repl, b)
 
   # Deal with literal backspaces.
   if f.eqs and f.eqsupport:
@@ -794,7 +806,7 @@ def pyint(f, l):
   if l.startswith('&gt;&gt;&gt;'):
     hb(f, '<span class="pycommand">|</span>\n', l)
   else:
-    out(f, l + '\n')
+    out(f.outf, l + '\n')
 
 def putbsbs(l):
   for i in range(len(l)):
@@ -819,7 +831,7 @@ def gethl(lang):
     d['special'] = ['cols', 'optvar', 'param', 'problem', 'norm2', 'norm1',
             'value', 'minimize', 'maximize', 'rows', 'rand',
             'randn', 'printval', 'matrix']
-    d['error'] = ['\w*Error',]
+    d['error'] = [r'\w*Error',]
     d['commentuntilend'] = '#'
     d['strings'] = True
   elif lang in ['c', 'c++', 'cpp']:
@@ -828,7 +840,7 @@ def gethl(lang):
             'clock_t', 'struct', 'long', 'extern', 'char']
     d['operator'] = ['#include.*', '#define', '@pyval{', '}@', '@pyif{',
              '@py{']
-    d['error'] = ['\w*Error',]
+    d['error'] = [r'\w*Error',]
     d['commentuntilend'] = ['//', '/*', ' * ', '*/']
   elif lang in ('rb', 'ruby'):
     d['statement'] = putbsbs(['while', 'until', 'unless', 'if', 'elsif',
@@ -837,7 +849,7 @@ def gethl(lang):
     d['operator'] = putbsbs(['and', 'not', 'or'])
     d['builtin'] = putbsbs(['true', 'false', 'require', 'warn'])
     d['special'] = putbsbs(['IO'])
-    d['error'] = putbsbs(['\w*Error',])
+    d['error'] = putbsbs([r'\w*Error',])
     d['commentuntilend'] = '#'
     d['strings'] = True
     d['strings'] = True
@@ -855,13 +867,13 @@ def gethl(lang):
     d['builtin'] = putbsbs(['gem', 'gcc', 'python', 'curl', 'wget', 'ssh',
                 'latex', 'find', 'sed', 'gs', 'grep', 'tee',
                 'gzip', 'killall', 'echo', 'touch',
-                'ifconfig', 'git', '(?<!\.)tar(?!\.)'])
+                'ifconfig', 'git', r'(?<!\.)tar(?!\.)'])
     d['commentuntilend'] = '#'
     d['strings'] = True
   elif lang == 'matlab':
     d['statement'] = putbsbs(['max', 'min', 'find', 'rand', 'cumsum', 'randn', 'help',
                      'error', 'if', 'end', 'for'])
-    d['operator'] = ['&gt;', 'ans =', '>>', '~', '\.\.\.']
+    d['operator'] = ['&gt;', 'ans =', '>>', '~', r'\.\.\.']
     d['builtin'] = putbsbs(['csolve'])
     d['commentuntilend'] = '%'
     d['strings'] = True
@@ -927,7 +939,7 @@ def language(f, l, hl):
       hb(f, '<span class="comment">|</span>\n', allreplace(l))
       return
 
-  out(f, l + '\n')
+  out(f.outf, l + '\n')
 
 def geneq(f, eq, dpi, wl, outname):
   # First check if there is an existing file.
@@ -953,14 +965,14 @@ def geneq(f, eq, dpi, wl, outname):
   basefile = texfile[:-4]
   g = os.fdopen(fd, 'wb')
 
-  preamble = '\documentclass{article}\n'
+  preamble = r'\documentclass{article}\n'
   for p in f.eqpackages:
     preamble += '\\usepackage{%s}\n' % p
   for p in f.texlines:
     # Replace \{ and \} in p with { and }.
     # XXX hack.
     preamble += re.sub(r'\\(?=[{}])', '', p + '\n')
-  preamble += '\pagestyle{empty}\n\\begin{document}\n'
+  preamble += r'\pagestyle{empty}\n\\begin{document}\n'
   g.write(preamble)
   
   # Write the equation itself.
@@ -970,7 +982,7 @@ def geneq(f, eq, dpi, wl, outname):
     g.write('$%s$' % eq)
 
   # Finish off the tex file.
-  g.write('\n\\newpage\n\end{document}')
+  g.write(r'\n\\newpage\n\end{document}')
   g.close()
 
   exts = ['.tex', '.aux', '.dvi', '.log']
@@ -1120,7 +1132,7 @@ def codeblock(f, g):
         out(f.outf, l)
       elif g[1] == 'jemdoc':
         # doing this more nicely needs python 2.5.
-        for x in ('#', '~', '>>>', '\~', '{'):
+        for x in ('#', '~', '>>>', r'\~', '{'):
           if str(l).lstrip().startswith(x):
             out(f.outf, '</tt><pre class="tthl">')
             out(f.outf, l + '</pre><tt class="tthl">')
@@ -1181,8 +1193,8 @@ def procfile(f):
   # convert these to a dictionary.
   showfooter = True
   showsourcelink = False
-  showlastupdated = True
-  showlastupdatedtime = True
+  showlastupdated = False
+  showlastupdatedtime = False
   nodefaultcss = False
   fwtitle = False
   css = []
@@ -1296,6 +1308,9 @@ def procfile(f):
   for x in js:
     hb(f.outf, f.conf['specificjs'], x)
 
+  # Add the favicon
+  out(f.outf, '<link rel="icon" type="image/png" href="pic/logo.png">\n')
+
   # Look for a title.
   if pc(f) == '=': # don't check exact number f.outf '=' here jem.
     t = br(nl(f), f)[:-1]
@@ -1345,13 +1360,13 @@ def procfile(f):
       # Quickly pull out the equation here:
       # Check we don't already have the terminating character in a whole-line
       # equation without linebreaks, eg \( Ax=b \):
-      if not s.strip().endswith('\)'):
+      if not s.strip().endswith(r'\)'):
         while True:
           l = nl(f, codemode=True)
           if not l:
             break
           s += l
-          if l.strip() == '\)':
+          if l.strip() == r'\)':
             break
       out(f.outf, br(s.strip(), f))
 
@@ -1552,7 +1567,7 @@ def main():
     else:
       thisout = outname
 
-    infile = open(inname, 'rUb')
+    infile = open(inname, 'rb')  # Ensure the file is opened in binary mode
     outfile = open(thisout, 'w')
 
     f = controlstruct(infile, outfile, conf, inname)
