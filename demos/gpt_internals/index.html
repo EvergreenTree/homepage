@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>tfjs-vis Tiny GPT Internals</title>
+  <link rel="stylesheet" href="./tufte.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.19.0/dist/tf.min.js"></script>
+  <script src="../../dist/tfjs-vis.umd.min.js"></script>
+  <script type="module" src="./index.js"></script>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      font-size: 14px;
+    }
+
+    pre {
+      background: #fafafa;
+      padding: 12px;
+      border: 1px solid #ddd;
+      white-space: pre-wrap;
+    }
+
+    .controls button {
+      margin-right: 8px;
+    }
+
+    .inline-inputs input {
+      margin-right: 8px;
+      width: 90px;
+    }
+
+    .viz-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .viz-row > div {
+      flex: 1 1 320px;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <h1>Peeking inside a tiny GPT</h1>
+
+    <section>
+      <p>
+        This demo trains a single-block, character-level GPT in the browser using TensorFlow.js. The corpus is the
+        Shakespeare sonnets dataset popularized by <code>nanoGPT</code>. Use the buttons below to load the text, train
+        the model, and inspect the learned attention patterns.
+      </p>
+      <div class="controls">
+        <button id="load-data">Load Data</button>
+        <button id="init-model" disabled>Initialise Model</button>
+        <button id="start-training" disabled>Start Training</button>
+        <button id="stop-training" disabled>Stop Training</button>
+        <button id="show-model" disabled>Show Model Summary</button>
+        <button id="show-visor">Show Visor</button>
+      </div>
+      
+      <div class="hyperparameters">
+        <h3>Model Hyperparameters</h3>
+        <div class="inline-inputs">
+          <label>Block Size: <input type="number" id="block-size" value="64" min="16" max="256" step="16"></label>
+          <label>Embedding Size: <input type="number" id="embedding-size" value="64" min="32" max="512" step="32"></label>
+          <label>Num Heads: <input type="number" id="num-heads" value="4" min="1" max="16" step="1"></label>
+          <label>Num Layers: <input type="number" id="num-layers" value="3" min="1" max="8" step="1"></label>
+        </div>
+        <div class="inline-inputs">
+          <label>MLP Hidden Size: <input type="number" id="ff-hidden-size" value="256" min="64" max="1024" step="64"></label>
+          <label>Learning Rate: <input type="number" id="learning-rate" value="0.005" min="0.0001" max="0.01" step="0.0001"></label>
+          <label>Train Size: <input type="number" id="train-size" value="2048" min="512" max="8192" step="512"></label>
+          <label>Val Size: <input type="number" id="val-size" value="512" min="128" max="2048" step="128"></label>
+        </div>
+        <div class="inline-inputs">
+          <label>Batch Size: <input type="number" id="batch-size" value="32" min="8" max="128" step="8"></label>
+          <label>Epochs: <input type="number" id="epochs" value="20" min="1" max="100" step="1"></label>
+        </div>
+      </div>
+      <p id="training-status"></p>
+      <div class="viz-row">
+        <div id="dataset-stats"></div>
+        <div id="char-frequency"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sample the model</h2>
+      <p>
+        Provide a prompt, choose how many new characters to generate, and optionally adjust the sampling temperature.
+        Lower temperatures make the output more deterministic.
+      </p>
+      <textarea id="prompt-text" placeholder="Type a prompt here…">O Romeo, Romeo! Wherefore art thou Romeo?</textarea>
+      <div class="inline-inputs">
+        <label>Length <input type="number" id="generate-length" min="1" max="400" value="120" /></label>
+        <label>Temperature <input type="number" id="temperature" step="0.1" min="0.1" max="2.0" value="1.0" /></label>
+        <button id="generate-button" disabled>Generate</button>
+        <button id="analyze-attention" disabled>Analyse Attention</button>
+      </div>
+      <pre id="sample-output"></pre>
+      <div id="next-token-chart"></div>
+    </section>
+
+    <section>
+      <h2>Attention heatmap</h2>
+      <p>
+        After generation or via the <em>Analyse Attention</em> button, the heatmap below shows the average attention paid
+        by each output position (rows) to the tokens in the prompt (columns).
+      </p>
+      <div id="attention-surface"></div>
+    </section>
+
+    <section>
+      <h2>Acknowledgement</h2>
+      <p>
+        This demo is based on the <a href="https://storage.googleapis.com/tfjs-vis/mnist/dist/index.html">MNIST internals demo</a>.
+      </p>
+      <div id="acknowledgement"></div>
+    </section>
+  </article>
+</body>
+</html>
