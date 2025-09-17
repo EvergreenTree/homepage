@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>CoLU vs ReLU GPT Comparison</title>
-  <link rel="stylesheet" href="../gpt_internals/tufte.css" />
+  <link rel="stylesheet" href="./tufte.css" />
   <script src="https://unpkg.com/@tensorflow/tfjs"></script>
   <script src="https://unpkg.com/@tensorflow/tfjs-vis"></script>
   <script type="module" src="./index.js"></script>
@@ -68,7 +68,7 @@
       <h3>Hyperparameters</h3>
       <div class="inline-inputs">
         <label>Context Window
-          <input type="number" id="block-size" value="32" min="16" max="256" step="16" />
+          <input type="number" id="block-size" value="64" min="16" max="256" step="16" />
         </label>
         <label>Embedding Size
           <input type="number" id="embedding-size" value="32" min="32" max="512" step="32" />
@@ -80,10 +80,10 @@
           <input type="number" id="num-layers" value="3" min="1" max="8" step="1" />
         </label>
         <label>Feed-Forward Width
-          <input type="number" id="ff-hidden-size" value="512" min="32" max="1024" step="32" />
+          <input type="number" id="ff-hidden-size" value="501" min="32" max="1024" step="32" />
         </label>
         <label>CoLU group dim
-          <input type="number" id="colu-dim" value="4" min="2" max="16" step="1" />
+          <input type="number" id="colu-dim" value="3" min="2" max="16" step="1" />
         </label>
       </div>
       <div class="inline-inputs">
@@ -91,16 +91,16 @@
           <input type="number" id="learning-rate" value="0.005" min="0.0001" max="0.02" step="0.0001" />
         </label>
         <label>Train Size
-          <input type="number" id="train-size" value="512" min="256" max="8192" step="256" />
+          <input type="number" id="train-size" value="1024" min="256" max="1000000" step="256" />
         </label>
         <label>Validation Size
-          <input type="number" id="val-size" value="512" min="128" max="2048" step="128" />
+          <input type="number" id="val-size" value="512" min="128" max="100000" step="128" />
         </label>
         <label>Batch Size
-          <input type="number" id="batch-size" value="32" min="8" max="128" step="16" />
+          <input type="number" id="batch-size" value="32" min="1" max="128" step="16" />
         </label>
         <label>Epochs
-          <input type="number" id="epochs" value="3" min="1" max="100" step="1" />
+          <input type="number" id="epochs" value="1" min="1" max="100" step="1" />
         </label>
       </div>
     </section>

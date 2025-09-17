@@ -14,3 +14,7 @@ yarn watch
 Then open the served page. Load the dataset, tweak hyperparameters if desired, train each variant via **Train ReLU** or
 **Train CoLU**, and use **Gather Curves** to overlay their loss traces. Each activation also gets its own chart so you can
 track learning step by step.
+
+## Results
+
+<img src="./ui.png" alt="UI" />
