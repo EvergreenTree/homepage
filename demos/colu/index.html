@@ -11,9 +11,17 @@
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
     }
+    article {
+      max-width: 760px;
+      margin: 0 0 0 24px;
+    }
+    article p {
+      max-width: 760px;
+      line-height: 1.6;
+    }
     textarea {
       width: 100%;
-      max-width: 640px;
+      max-width: 760px;
       min-height: 120px;
       font-size: 14px;
     }
@@ -39,12 +47,11 @@
 </head>
 <body>
   <article>
-    <h1>Comparing GPT Feed-Forward Activations</h1>
+    <h1>Comparing GPT Activations</h1>
     <p>
       This demo trains the same tiny GPT with three different feed-forward activations: ReLU, CoLU, and RCoLU.
       All variants reuse the same batches so we can compare their learning curves side by side in
-      tfjs-vis. Load the Shakespeare character corpus, train each activation separately, and press <em>Gather Curves</em>
-      to overlay them on a combined chart.
+      <a href="https://github.com/tensorflow/tfjs-vis">tfjs-vis</a>. 
     </p>
     <div class="controls">
       <button id="show-visor">Toggle Visor</button>
@@ -78,11 +85,11 @@
         <label>CoLU group dim
           <input type="number" id="colu-dim" value="4" min="2" max="16" step="1" />
         </label>
+      </div>
+      <div class="inline-inputs">
         <label>Learning Rate
           <input type="number" id="learning-rate" value="0.005" min="0.0001" max="0.02" step="0.0001" />
         </label>
-      </div>
-      <div class="inline-inputs">
         <label>Train Size
           <input type="number" id="train-size" value="512" min="256" max="8192" step="256" />
         </label>
