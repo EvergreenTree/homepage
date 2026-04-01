@@ -410,6 +410,8 @@ def pc(f, ditchcomments=True):
     return c if c else ''
 
 def doincludes(f, l):
+  if isinstance(l, bytes):
+    l = l.decode('utf-8')
   ir = 'includeraw{'
   i = 'include{'
   if l.startswith(ir):
@@ -1203,6 +1205,8 @@ def procfile(f):
   while pc(f, False) == '#':
     l = f.inf.readline()
     f.linenum += 1
+    if isinstance(l, bytes):
+      l = l.decode('utf-8')
     if doincludes(f, l[1:]):
       continue
     if l.startswith('# jemdoc:'):
