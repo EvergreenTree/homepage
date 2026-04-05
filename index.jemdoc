@@ -16,18 +16,6 @@ I'm an AI research scientist working across foundation models, model evaluation,
 *Research themes*: Foundation-model architectures | Training and inference efficiency | Model evaluation
 ~~~
 
-== Highlights
-- 5 peer-reviewed papers and public research reports on foundation-model architecture, generative modeling, and training and inference efficiency.
-- Built and maintained distributed training pipelines on Jean-Zay and Google TPUv3, including PyTorch to JAX/XLA migration and experiments at 10k+ GPU-hour scale.
-- DeepPrism achieved up to 1000x parameter reduction for generative models while preserving generation quality.
-- At Mercor, designed benchmark tasks and grading workflows for model evaluation.
-
-== Research Agenda
-I aim to build reusable foundations for AI progress through benchmark design, efficient foundation-model architectures, and mathematically grounded views of neural computation.
-
-- Benchmarks and evaluation for advanced reasoning and model reliability.
-- Efficient foundation-model architectures with better training and inference tradeoffs.
-- Mathematical frameworks that explain and guide scalable neural architectures.
 
 == Experience
 - *Mercor* (2025-present), Machine Learning Researcher, AI Evaluation. Worked on evaluation datasets, benchmarks, and quality-control pipelines for advanced models.
