@@ -21,3 +21,13 @@ yarn-error.log*
 # OS/editor
 .DS_Store
 Thumbs.db
+
+screenshots/
+agent.js
+.next/
+playwright-screenshots.js
+next-env.d.ts
+tsconfig.tsbuildinfo
+.kurtel-activity-log.json
+.kurtel-repo-cache.json
+.kurtel-repo-cache.json.gz
